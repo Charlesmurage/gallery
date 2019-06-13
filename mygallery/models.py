@@ -10,6 +10,9 @@ class Uploader(models.Model):
     def __str__(self):
         return self.first_name
 
+    def save_uploader(self):
+        self.save()
+
     class Meta:
         ordering = ['first_name']
 

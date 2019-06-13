@@ -9,3 +9,8 @@ class UploaderTestCase(TestCase):
 
     def test_instance(self):
         self.assertTrue(isinstance(self.charles,Uploader))
+
+    def test_save_method(self):
+        self.charles.save_uploader()
+        uploaders = Uploader.objects.all()
+        self.assertTrue(len(uploaders) > 0)
