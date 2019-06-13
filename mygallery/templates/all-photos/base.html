@@ -1,3 +1,5 @@
+{% load bootstrap3%}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +12,19 @@
     {% else %}
     <title>My Gallery</title>
     {% endif %}
+
+    {% block styles %}
+    {% bootstrap_css %}
+    {% endblock %}
 </head>
 <body>
-    {% block content %} <h1> Photo uploaded on {{date|date:"l d-F Y"}}</h1>
+    {% include "navbar.html" %}
+    {% block content %} <h1 class="text-center"> Photos uploaded on {{date|date:"l d-F Y"}}</h1>
+
+    {% endblock %}
+    {% block scripts %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     {% bootstrap_javascript %}
     {% endblock %}
     
 </body>
