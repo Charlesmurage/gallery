@@ -42,3 +42,9 @@ class Pdetails(models.Model):
     def days_photos(cls,date):
         mygallery = cls.objects.filter(pub_date__date = date)
         return mygallery
+
+    @classmethod
+    def search_by_title(cls,search_term):
+        mygallery = cls.objects.filter(title__icontains=search_term)
+
+        return mygallery
