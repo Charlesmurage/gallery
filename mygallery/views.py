@@ -20,10 +20,10 @@ def previous_photos(request,past_date):
         raise Http404()
         assert False
 
-        if date == dt.date.today():
-            return redirect(photo_of_day)
+    if date == dt.date.today():
+        return redirect(photo_of_day)
 
-        return render(request, 'all-photos/prev-photos.html',{"date":date,})
+    return render(request, 'all-photos/prev-photos.html',{"date":date,})
 
     day = convert_dates(date)
     html= f'''
