@@ -5,6 +5,7 @@
   <div class="row">
     {% if photos %}
       <h2>Found {{ photos|length }} of searched term {{message}}</h2>
+      <img src="{{mygallery_item.photo_image.url}}">
     {% else %}
       <h2> Found 0 photos for the search term {{message}}</h2>
     {% endif %}
@@ -17,6 +18,7 @@
     {% for photo in photos %}
       <div class="col-sm-6 col-md-3">
           <h1>{{photo.title}}</h1>
+          
       </div>
     {% endfor %}
   {% endif %}

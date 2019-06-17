@@ -25,7 +25,7 @@ def previous_photos(request,past_date):
     if date == dt.date.today():
         return redirect(photo_of_day)
 
-    mygallery = Pdetails.days_mygallery(date)
+    mygallery = Pdetails.days_photos(date)
     return render(request, 'all-photos/prev-photos.html',{"date":date,"mygallery":mygallery})
 
 
@@ -61,3 +61,12 @@ def search_results(request):
         message = "You havent searched for any term"
 
         return render(request,'all-photos/search.html',{"message":message})
+
+def photo(request,photo_id):
+    try:
+        photo = Pdetails.objects.get(id = photo_id)
+
+    except DoesNotExist:
+        raise Http404()
+
+    return render(request,"all-photos/photo.html", {"photo":photo})

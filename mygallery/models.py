@@ -30,6 +30,7 @@ class Pdetails(models.Model):
     uploader = models.ForeignKey(Uploader)
     tags = models.ManyToManyField(tags)
     pub_date = models.DateTimeField(auto_now_add=True)
+    photo_image = models.ImageField(upload_to = 'photos/', default = 'DEFAULT')
 
     @classmethod
     def todays_photos(cls):
