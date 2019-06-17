@@ -1,7 +1,7 @@
-# [Zoom](https://zoooom.herokuapp.com)
+# [Gallery](https://muragegallery.herokuapp.com)
 ### Simple photo gallery web application to showcase beautiful pictures and designs 
-### June 8th, 2018
-#### By **[Richard Waweru](https://github.com/devwaweru)**
+### June 17th, 2019
+#### By **[Charles Murage](https://github.com/charlesmurage)**
 
 ## Description
 [Gallery]((https://muragegallery.herokuapp.com)) is a simple photo gallery web application to showcase beautiful pictures and designs. Users get to view photos updated by the site admin. Users can see photos based on the location, by clicking on the listed locations in the menu. They can also copy the link to a photo to paste at their discretion. The search functionality will search photos based on the categories. 
